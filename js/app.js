@@ -1,7 +1,21 @@
 $(document).ready(function() {
 
+//QUIZ BEGIN STATE
+	$('#start').show();
+	$('#questionNumber').hide();
+	$('#questionText').hide();
+	$('ul').hide();
+	$('#next').hide();
+	$('#correctAnswer').hide();
+	$('#restart').hide();
+	$('#score').hide();
+
 // START QUIZ FUNCTIONALITY 
-	$('#')
+	$('#start').click(function() {
+		console.log("User started quiz");
+		$('#start').hide();
+
+	});
 
 // // START QUIZ FUNCTIONALITY 
 	// $('#start').click(function() {
