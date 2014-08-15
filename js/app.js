@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 //QUIZ BEGIN STATE
+	console.log("The quiz is about to start");
 	$('#start').show();
 	$('#questionNumber').hide();
 	$('#questionText').hide();
@@ -14,6 +15,13 @@ $(document).ready(function() {
 	$('#start').click(function() {
 		console.log("User started quiz");
 		$('#start').hide();
+		$('#questionNumber').show();
+		$('#questionText').show();
+		$('ul').show();
+		$('#next').show();
+		$('#correctAnswer').show();
+		$('#restart').show();
+		$('#score').show();
 
 	});
 
