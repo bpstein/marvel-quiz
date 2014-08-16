@@ -93,7 +93,7 @@ var question = [
             console.log("userGuess is "+ userGuess);
             console.log("correct");
             $("#correctAnswer").show();
-            $("#correctAnswer").text("CORRECT!" );
+            $("#correctAnswer").text("CORRECT!");
             correctAnswer ++;
             answer++;
             if(answer === 5) {
@@ -135,9 +135,36 @@ var question = [
 		questionNumber = answer + 1;
 		$("input:checked").removeAttr("checked");
 		$('#submit').show();
-		$('#next').hide();        
+		$('#next').hide();
+		$('#correctAnswer').hide();        
      	askQuestion();
 	});
+
+	//RESTART QUIZ FUNCTIONALITY
+	$("#new").click(function() {
+        console.log("User started a new quiz");
+        restartQuiz();
+        $("#questionText").text("Want to go another round?");
+    });
+
+    function restartQuiz() {
+    	correctAnswer = 0;
+        end = false;
+        questAnswer = 0;
+    	$('#start').hide();
+		$('#questionNumber').show();
+		$('#questionText').show();
+		$('ul').show();
+		$('#next').hide();
+		$('#correctAnswer').show();
+		$('#submit').show();
+		$('#restart').show();
+		$('#score').show();
+		askQuestion();
+		questNumber = answer+1;
+	};
+
+	restartQuiz();
 });
 
 
