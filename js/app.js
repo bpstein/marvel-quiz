@@ -18,6 +18,14 @@ var question = [
 		correct: 3,
 		ans: "It's yellow!",
 	},
+
+	{
+		number: "Question 3",
+		questionText: "33 22?",
+		answers: ["blue", "purple", "black", "yellow"],
+		correct: 2,
+		ans: "It's black!",
+	},
 ];
 
 //DECLARE QUIZ VARIABLES
@@ -60,10 +68,10 @@ var question = [
   		console.log("Question number " + questionNumber);
   		$('#questionText').text(question[answer].questionText);
   		$('#questionNumber').text(question[answer].number);
-  		$('#1stchoice').text(question[answer].answers[0]);
-  		$('#choice2').text(question[answer].answers[1]);
-  		$('#choice3').text(question[answer].answers[2]);
-  		$('#choice4').text(question[answer].answers[3]);
+  		$('#1stChoice').text(question[answer].answers[0]);
+  		$('#2ndChoice').text(question[answer].answers[1]);
+  		$('#3rdChoice').text(question[answer].answers[2]);
+  		$('#4thChoice').text(question[answer].answers[3]);
   		$(":radio").click(function() {
   			console.log("User selected an answer");
             $("#submit").prop("disabled",false);
@@ -90,28 +98,27 @@ var question = [
             answer++;
             if(answer === 5) {
                 $("#score").addClass("final");
-               $("#score").text("Your final score is " + correctAnswer +"/" + answer);
+               $("#score").text("Your final score is " + correctAnswer +"of" + answer);
                return;
             }
             else {
             $("#next").show();
-            $("#score").text("Current score: " + correctAnswer +"/" + answer);
+            $("#score").text("Current score: " + correctAnswer +"of" + answer);
             }
             
         }
         else {
-            console.log("wrong");
+            console.log("user guess is wrong");
             $("#correctAnswer").show();
             $("#correctAnswer").text("WRONG! " + question[answer].correctAnswer);
             answer++;
-            $("#score").text("Current score: " + correctAnswer +"/" + answer);
+            $("#score").text("Current score: " + correctAnswer +" out of " + answer);
             if(answer === 5) {
                  $("#score").addClass("final");
-               $("#score").text("Your final score is " + correctAnswer +"/" + answer);
+               $("#score").text("Your final score is " + correctAnswer +" out of " + answer);
                return;
             }
             $("#next").show();
-            
         }
     });
 
@@ -131,9 +138,6 @@ var question = [
 		$('#next').hide();        
      	askQuestion();
 	});
-
-
-
 });
 
 
