@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+
+var aaron = [
+	{sleep: "None"}, // array element [0]
+	{sleep: "Moderate"},
+	{sleep: "Heaps"} // [2]
+]
 //INTRODUCE QUESTIONS AS OBJECTS
 
 var question = [
@@ -87,6 +93,8 @@ var question = [
   //EVALUATE ANSWER
   	$("body").on('click', '#submit', function() {
         var userGuess = $("input[type='radio']:checked").val();
+        alert("Question number " + (questionNumber-1));
+        var currentQuestionIndex = (questionNumber-1);
         $("#submit").hide();
         $("#score").show();
         if (userGuess == question[answer].correct) {
@@ -98,19 +106,19 @@ var question = [
             answer++;
             if(answer === 5) {
                 $("#score").addClass("final");
-               $("#score").text("Your final score is " + correctAnswer +"of" + answer);
+               $("#score").text("Your final score is " + correctAnswer +" of " + answer);
                return;
             }
             else {
             $("#next").show();
-            $("#score").text("Current score: " + correctAnswer +"of" + answer);
+            $("#score").text("Current score: " + correctAnswer +" of " + answer);
             }
             
         }
         else {
             console.log("user guess is wrong");
             $("#correctAnswer").show();
-            $("#correctAnswer").text("WRONG! " + question[answer].correctAnswer);
+            $("#correctAnswer").text("WRONG! " + question[currentQuestionIndex].ans);
             answer++;
             $("#score").text("Current score: " + correctAnswer +" out of " + answer);
             if(answer === 5) {
