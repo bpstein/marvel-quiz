@@ -1,20 +1,14 @@
 $(document).ready(function() {
 
-
-var aaron = [
-	{sleep: "None"}, // array element [0]
-	{sleep: "Moderate"},
-	{sleep: "Heaps"} // [2]
-]
 //INTRODUCE QUESTIONS AS OBJECTS
 
 var question = [
 	{
 		number: "Question 1",
-		questionText: "Question question?",
-		answers: ["red", "blue", "black", "white"],
-		correct: 0,
-		ans: "It's red!",
+		questionText: "Which character from the Marvel universe is credited with inspiring the appearance of Darth Vader?",
+		answers: ["Iron Man", "Doctor Doom", "black", "white"],
+		correct: 1,
+		ans: "Doctor Doom, among other characters, was a key inspiration for Darth Vader.",
 	},
 
 	{
