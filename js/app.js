@@ -4,6 +4,7 @@ $(document).ready(function() {
 
 var question = [
 	{
+		//QUESTION 1
 		number: "Question 1",
 		questionText: "Which character from the Marvel universe is credited with inspiring the appearance of Darth Vader?",
 		answers: ["Iron Man", "Doctor Doom", "black", "white"],
@@ -12,6 +13,7 @@ var question = [
 	},
 
 	{
+		//QUESTION 2
 		number: "Question 2",
 		questionText: "Question 22?",
 		answers: ["red", "purple", "black", "yellow"],
@@ -20,6 +22,43 @@ var question = [
 	},
 
 	{
+		//QUESTION 3
+		number: "Question 3",
+		questionText: "33 22?",
+		answers: ["blue", "purple", "black", "yellow"],
+		correct: 2,
+		ans: "It's black!",
+	},
+
+	{
+		//QUESTION 4
+		number: "Question 3",
+		questionText: "33 22?",
+		answers: ["blue", "purple", "black", "yellow"],
+		correct: 2,
+		ans: "It's black!",
+	},
+
+	{
+		//QUESTION 5
+		number: "Question 3",
+		questionText: "33 22?",
+		answers: ["blue", "purple", "black", "yellow"],
+		correct: 2,
+		ans: "It's black!",
+	},
+
+	{
+		//QUESTION 6
+		number: "Question 3",
+		questionText: "33 22?",
+		answers: ["blue", "purple", "black", "yellow"],
+		correct: 2,
+		ans: "It's black!",
+	},
+
+	{
+		//QUESTION 7
 		number: "Question 3",
 		questionText: "33 22?",
 		answers: ["blue", "purple", "black", "yellow"],
@@ -87,7 +126,7 @@ var question = [
   //EVALUATE ANSWER
   	$("body").on('click', '#submit', function() {
         var userGuess = $("input[type='radio']:checked").val();
-        alert("Question number " + (questionNumber-1));
+        // alert("Question number " + (questionNumber-1));
         var currentQuestionIndex = (questionNumber-1);
         $("#submit").hide();
         $("#score").show();
