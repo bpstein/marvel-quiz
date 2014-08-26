@@ -1,4 +1,4 @@
-$(document).ready(function() {
+	$(document).ready(function() {
 
 //INTRODUCE QUESTIONS AS OBJECTS
 
@@ -7,7 +7,7 @@ var question = [
 		//QUESTION 1
 		number: "Question 1",
 		questionText: "Which character from the Marvel universe is credited with inspiring the appearance of Darth Vader?",
-		answers: ["Iron Man", "Doctor Doom", "black", "white"],
+		answers: ["Iron Man", "Doctor Doom", "Colossus", "Hulk"],
 		correct: 1,
 		ans: "Doctor Doom, among other characters, was a key inspiration for Darth Vader.",
 	},
@@ -15,55 +15,55 @@ var question = [
 	{
 		//QUESTION 2
 		number: "Question 2",
-		questionText: "Question 22?",
-		answers: ["red", "purple", "black", "yellow"],
-		correct: 3,
-		ans: "It's yellow!",
+		questionText: "Who is considered Central Park's greatest protector?",
+		answers: ["Spider-Man", "Wolverine", "Squirrel Girl", "Captain America"],
+		correct: 2,
+		ans: "Surprisingly, it's Squirrel Girl!",
 	},
 
 	{
 		//QUESTION 3
 		number: "Question 3",
-		questionText: "33 22?",
-		answers: ["blue", "purple", "black", "yellow"],
-		correct: 2,
-		ans: "It's black!",
+		questionText: "Which real-life music artist appears as a character in the Marvel universe?",
+		answers: ["Eminem", "Lorde", "Snoop Dog", "Justin Bieber"],
+		correct: 0,
+		ans: "Eminem! Seriously!",
 	},
 
 	{
 		//QUESTION 4
-		number: "Question 3",
-		questionText: "33 22?",
-		answers: ["blue", "purple", "black", "yellow"],
-		correct: 2,
-		ans: "It's black!",
+		number: "Question 4",
+		questionText: "Which of Iron Man's gadgets has appeared in comics, but not yet in any Marvel films?",
+		answers: ["Suit that assembles on command", "Shoulder-mounted guns", "Remote controlled suit", "Roller skates"],
+		correct: 3,
+		ans: "Roller skates. Really.",
 	},
 
 	{
 		//QUESTION 5
-		number: "Question 3",
-		questionText: "33 22?",
-		answers: ["blue", "purple", "black", "yellow"],
-		correct: 2,
-		ans: "It's black!",
+		number: "Question 5",
+		questionText: "Which company specializes in cleaning up the mess that superheroes and supervillains leave behind?",
+		answers: ["S.H.I.E.L.D.", "Damage Control", "X-Corporation", "Mr Wolf & Co."],
+		correct: 1,
+		ans: "Damage Control.",
 	},
 
 	{
 		//QUESTION 6
-		number: "Question 3",
-		questionText: "33 22?",
-		answers: ["blue", "purple", "black", "yellow"],
+		number: "Question 6",
+		questionText: "The character pictured here is known as the Dark Phoenix. What is her alter ego?",
+		answers: ["Kitty Pryde", "Scott Summers", "Jean Grey", "Mary Jane Watson"],
 		correct: 2,
-		ans: "It's black!",
+		ans: "Jean Grey.",
 	},
 
 	{
 		//QUESTION 7
-		number: "Question 3",
-		questionText: "33 22?",
-		answers: ["blue", "purple", "black", "yellow"],
-		correct: 2,
-		ans: "It's black!",
+		number: "Question 7",
+		questionText: "In an alternate reality form of Spider-Man, Peter Parker doesn't turn into Spider-Man. Instead, which of the following superheroes does he become?",
+		answers: ["Sheep Boy", "Batman", "Superman", "Ant Man"],
+		correct: 0,
+		ans: "...Sheep Boy.",
 	},
 ];
 
