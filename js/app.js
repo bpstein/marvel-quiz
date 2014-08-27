@@ -111,9 +111,10 @@ var question = [
   		$('#2ndChoice').text(question[answer].answers[1]);
   		$('#3rdChoice').text(question[answer].answers[2]);
   		$('#4thChoice').text(question[answer].answers[3]);
+  		$('#submit').prop("disabled", true);
   		$(":radio").click(function() {
   			console.log("User selected an answer");
-            $("#submit").prop("disabled",false);
+            $("#submit").prop("disabled", false);
             });
             if (answer === 0) {
                 $("#score").hide();            
@@ -136,7 +137,7 @@ var question = [
             $("#correctAnswer").show();
             $("#correctAnswer").text("CORRECT!");
             correctAnswer ++;
-            answer++;
+            answer ++;
             if(answer === 5) {
                 $("#score").addClass("final");
                $("#score").text("Your final score is " + correctAnswer +" of " + answer);
@@ -168,6 +169,7 @@ var question = [
 		console.log("User submitted an answer");
 		$('#submit').hide();
 		$('#next').show();
+		// $(':radio').prop('unchecked');
 	});
 
   	//NEXT QUESTION FUNCTIONALITY
@@ -182,7 +184,7 @@ var question = [
 	});
 
 	//RESTART QUIZ FUNCTIONALITY
-	$("#new").click(function() {
+	$("#restart").click(function() {
         console.log("User started a new quiz");
         restartQuiz();
         $("#questionText").text("Want to go another round?");
@@ -192,25 +194,23 @@ var question = [
     	correctAnswer = 0;
         end = false;
         questAnswer = 0;
-    	$('#start').hide();
-		$('#questionNumber').show();
+    	$('#start').show();
+		$('#questionNumber').hide();
 		$('#questionText').show();
 		$('ul').show();
 		$('#next').hide();
+		$('restart').hide();
 		$('#correctAnswer').show();
-		$('#submit').show();
+		$('#submit').hide();
+		$('#submit').prop('disabled', true);
 		$('#restart').show();
-		$('#score').show();
+		$('#score').hide();
 		askQuestion();
-		questNumber = answer+1;
+		// questNumber = answer+1;
 	};
 
 	restartQuiz();
 });
-
-
-
-
 
 
 
