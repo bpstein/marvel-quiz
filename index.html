@@ -4,8 +4,15 @@
 
 	<html><head>
     <meta charset="UTF-8">
-    <title>Test Quiz</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Marvel Quiz App | Thinkful</title>
+
+    <!-- CSS STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/layout.css">
+    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+    <!-- JAVASCRIPT AND JQUERY -->
     <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 
@@ -14,9 +21,9 @@
     <div class="quiz">
         <div id="quiz-box">
             <h1>Practice Quiz</h1>
-            <h2 id="questionNumber" style="display: block;">Question #1</h2>
-            <h3 id="questionText" style="display: block;">What is the first question?</h3>
-            <ul style="display: block;" id="choices">
+            <h2 id="questionNumber">Question #1</h2>
+            <h3 id="questionText">What is the first question?</h3>
+            <ul id="choices">
                 <li>
                     <input type="radio" name="choice" id="choice1" value="0">
                     <label id="1stChoice" for="choice1">Choice 1</label>
@@ -34,36 +41,16 @@
                     <label id="4thChoice" for="choice4">Choice 4</label>
                 </li>
             </ul>
-            <input type="submit" id="next" value="Next" style="display: inline-block;">
-            <div id="correctAnswer" style="display: block;"></div>
-            <input type="submit" id="start" value="start" style="display: none;">
-            <input type="submit" id="submit" value="submit" style="display: none;">
-            
-<!--             <div id="restart" href="#" style="display: block;">Restart</div>
- -->        <input type="submit" id="restart" value="restart" style="display: block;">
-            <div id="score" style="display: block;">Current score: 0/1</div>
+            <input type="submit" id="next" value="Next">
+            <div id="correctAnswer"></div>
+            <input type="submit" id="start" value="start">
+            <input type="submit" id="submit" value="submit">
+            <input type="submit" id="restart" value="restart">
+            <div id="score">Current score: 0/1</div>
         </div>
     </div>
     <footer>
     </footer>
-
-</body>
-</html>
-	<meta charset="UTF-8">
-	<title>Marvel Quiz App</title>
-	
-	<!-- CSS STYLESHEETS -->
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-
-	<!-- JAVASCRIPT AND JQUERY -->
-	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-
-</head>
-<body>
-
 
 </body>
 </html>
