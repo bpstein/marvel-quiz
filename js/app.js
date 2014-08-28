@@ -202,10 +202,9 @@ var question = [
 	});
 
 	//RESTART QUIZ FUNCTIONALITY
-	$("#restart").click(function() {
+	$("#restart").on('click', function() {
         console.log("User started a new quiz");
         restartQuiz();
-        $("#questionText").text("Want to go another round?");
     });
 
     function restartQuiz() {
@@ -214,20 +213,29 @@ var question = [
         questAnswer = 0;
     	$('#start').show();
 		$('#questionNumber').hide();
-		$('#questionText').hide();
-		$('ul').show();
+		$("#questionText").text("Want to go another round?");		
+		$('ul').hide();
+		$('#choices').hide();
+		$('#choice1').hide();
+		$('#choice2').hide();
+		$('#choice3').hide();
+		$('#choice4').hide();
+		$('#1stChoice').hide();
+		$('#2ndChoice').hide();
+		$('#3rdChoice').hide();
+		$('#4thChoice').hide();
 		$('#next').hide();
-		$('restart').hide();
 		$('#correctAnswer').show();
 		$('#submit').hide();
 		$('#submit').prop('disabled', true);
 		$('#restart').show();
 		$('#score').hide();
+		$('#correctAnswer').hide();
 		askQuestion();
-		// questNumber = answer+1;
+		// questNumber = answer-1;
 	};
 
-	restartQuiz();
+	// restartQuiz();
 });
 
 
