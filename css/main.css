@@ -1,3 +1,42 @@
+/*****************
+FONTS & TYPOGRAPHY
+*****************/
+
+h1, h2, h3, ul, #correctAnswer, #score {
+	font-family: 'Permanent Marker', Helvetica, Arial, sans-serif; 
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2.1em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+
+/*****************
+BUTTON STYLES 
+*****************/
+
+#submit, #next, #start, #restart {
+	background-color: #c0392b;
+	color: #FFE;
+	font-family: 'Permanent Marker', Helvetica, Arial, sans-serif; 
+	border-radius: 6px;
+	font-size: 1.1em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 4px 6px 4px 6px;
+}
+
 h2, h3, ul, #correctAnswer {
 	display: block;
 }

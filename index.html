@@ -19,34 +19,38 @@
 </head>
 <body>
     <div class="quiz">
-        <div id="quiz-box">
-            <h1>Practice Quiz</h1>
-            <h2 id="questionNumber">Question #1</h2>
-            <h3 id="questionText">What is the first question?</h3>
-            <ul id="choices">
-                <li>
-                    <input type="radio" name="choice" id="choice1" value="0">
-                    <label id="1stChoice" for="choice1">Choice 1</label>
-                </li>
-                <li>
-                    <input type="radio" name="choice" id="choice2" value="1">
-                    <label id="2ndChoice" for="choice2">Choice 2</label>
-                </li>
-                <li>
-                    <input type="radio" name="choice" id="choice3" value="2">
-                    <label id="3rdChoice" for="choice3">Choice 3</label>
-                </li>
-                <li>
-                    <input type="radio" name="choice" id="choice4" value="3">
-                    <label id="4thChoice" for="choice4">Choice 4</label>
-                </li>
-            </ul>
-            <input type="submit" id="next" value="Next">
-            <div id="correctAnswer"></div>
-            <input type="submit" id="start" value="start">
-            <input type="submit" id="submit" value="submit">
-            <input type="submit" id="restart" value="restart">
-            <div id="score">Current score: 0/1</div>
+        <div class="row">
+            <div class="col-span-3"></div>
+            <div id="quiz-box" class="col-span-6">
+                <h1>Quiz App</h1>
+                <h2 id="questionNumber">Question #1</h2>
+                <h3 id="questionText">What is the first question?</h3>
+                <ul id="choices">
+                    <li>
+                        <input type="radio" name="choice" id="choice1" value="0">
+                        <label id="1stChoice" for="choice1">Choice 1</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice2" value="1">
+                        <label id="2ndChoice" for="choice2">Choice 2</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice3" value="2">
+                        <label id="3rdChoice" for="choice3">Choice 3</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="choice" id="choice4" value="3">
+                        <label id="4thChoice" for="choice4">Choice 4</label>
+                    </li>
+                </ul>
+                <input type="submit" id="next" value="Next">
+                <div id="correctAnswer"></div>
+                <input type="submit" id="start" value="start">
+                <input type="submit" id="submit" value="submit">
+                <div id="score">Current score: 0/1</div>
+                <input type="submit" id="restart" value="restart">
+            </div>
+            <div class="col-span-3"></div>
         </div>
     </div>
     <footer>
