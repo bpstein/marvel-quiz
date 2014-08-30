@@ -74,8 +74,10 @@ var question = [
 	var questionNumber = answer + 1;
 	var x; 
 
+//RESTART QUIZ FUNCTIONALITY
+	restartQuiz();
+
 //QUIZ BEGIN STATE
-	// console.log("The quiz is about to start");
 	$('#start').show();
 	$('#questionNumber').hide();
 	$('#questionText').hide();
@@ -101,7 +103,9 @@ var question = [
 		$('#restart').show();
 		$('#score').show();
 		askQuestion();
-		questNumber = answer+1;
+		questNumber = 0;
+		questAnswer = 0;
+
 	});
 
 //INPUTS FOR EACH QUESTIONS AND CHOICES
@@ -118,12 +122,13 @@ var question = [
   			console.log("User selected an answer");
             $("#submit").prop("disabled", false);
             });
-            if (answer === 0) {
-                $("#score").hide();            
-            }
-            else {
-                $("#score").show();
-            }
+            // if (answer === 7) {
+            //     $("#score").hide();
+            //     $('#score').text("Your final score for the quiz is " + correctAnswer + "/" + questAnswer);        
+            // }
+            // else {
+            //     $("#score").show();
+            // }
   	};
 
   //EVALUATE ANSWER
@@ -140,7 +145,7 @@ var question = [
             $("#correctAnswer").text("CORRECT!");
             correctAnswer ++;
             answer ++;
-            if(answer === 5) {
+            if(answer === 7) {
                 $("#score").addClass("final");
                $("#score").text("Your final score is " + correctAnswer +" of " + answer);
                return;
@@ -185,17 +190,12 @@ var question = [
      	askQuestion();
 	});
 
-	//RESTART QUIZ FUNCTIONALITY
-	$("#restart").on('click', function() {
-        console.log("User started a new quiz");
-        restartQuiz();
-    });
-
     function restartQuiz() {
     	correctAnswer = 0;
         end = false;
-        // questAnswer = answer+1;
-    	$('#start').hide();
+        questAnswer = 0;
+        questNumber = 0;
+    	$('#start').show();
 		$('#questionNumber').hide();
 		$('#questionText').show();
 		$("#questionText").text("Want to go another round?");		
@@ -208,20 +208,18 @@ var question = [
 		$('#restart').hide();
 		$('#score').hide();
 		$('#correctAnswer').hide();
-		questNumber = 0;
-		askQuestion();
-		// questNumber = answer-1;
+		// askQuestion();
 	};
 
-	// restartQuiz();
+	//RESTART QUIZ FUNCTIONALITY
+	$("#restart").on('click', function() {
+        console.log("User started a new quiz");
+        restartQuiz();
+    });
+
 });
 
 
-
-
-
-   
-    
     
        
     
