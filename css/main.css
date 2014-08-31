@@ -11,14 +11,64 @@ h1 {
 	text-align: center;
 }
 
-h2 {
-	font-size: 2.1em;
+#questionNumber {
+	font-size: 1.8em;
 }
 
 h3 {
 	font-size: 1.5em;
 }
 
+li, #score {
+	font-size: 1.2em;
+}
+
+
+/*****************
+POSITIONING
+*****************/
+
+h1 {
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+
+#questionNumber {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#choices {
+	margin-top: 30px;
+	margin-bottom: 35px;
+	padding-top: 15px;
+/*	float: left;
+*/}
+
+#image-box {
+	float: right;
+}
+
+li {
+	padding-top: 15px;
+}
+
+#score {
+	text-align: center;
+	margin: 50px 0px 40px 0px;
+}
+
+/*****************
+IMAGES
+*****************/
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 250px;
+	height: auto;
+}
 
 /*****************
 BUTTON STYLES 
@@ -42,7 +92,7 @@ h2, h3, ul, #correctAnswer {
 }
 
 #start, #restart #submit, #score {
-	display: none;
+	display: block;
 }
 
 #next {
