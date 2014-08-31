@@ -1,90 +1,86 @@
-	$(document).ready(function() {
+$(document).ready(function() {
 
-//INTRODUCE QUESTIONS AS OBJECTS
+	//INTRODUCE QUESTIONS AS OBJECTS
+	var question = [
+		{
+			//QUESTION 1
+			number: "Question 1",
+			questionText: "Which character from the Marvel universe is credited with inspiring the appearance of Darth Vader?",
+			answers: ["Iron Man", "Doctor Doom", "Colossus", "Hulk"],
+			correct: 1,
+			image: "images/doctor-doom.jpg",
+			ans: "Doctor Doom, among other characters, was a key inspiration for Darth Vader.",
+		},
 
-var question = [
-	{
-		//QUESTION 1
-		number: "Question 1",
-		questionText: "Which character from the Marvel universe is credited with inspiring the appearance of Darth Vader?",
-		answers: ["Iron Man", "Doctor Doom", "Colossus", "Hulk"],
-		correct: 1,
-		image: "images/doctor-doom.jpg",
-		ans: "Doctor Doom, among other characters, was a key inspiration for Darth Vader.",
-	},
+		{
+			//QUESTION 2
+			number: "Question 2",
+			questionText: "Who is considered Central Park's greatest protector?",
+			answers: ["Spider-Man", "Wolverine", "Squirrel Girl", "Captain America"],
+			correct: 2,
+			image: "images/squirrel-girl.png",
+			ans: "Surprisingly, it's Squirrel Girl!",
+		},
 
-	{
-		//QUESTION 2
-		number: "Question 2",
-		questionText: "Who is considered Central Park's greatest protector?",
-		answers: ["Spider-Man", "Wolverine", "Squirrel Girl", "Captain America"],
-		correct: 2,
-		image: "images/squirrel-girl.png",
-		ans: "Surprisingly, it's Squirrel Girl!",
-	},
+		{
+			//QUESTION 3
+			number: "Question 3",
+			questionText: "Which real-life music artist appears as a character in the Marvel universe?",
+			answers: ["Eminem", "Lorde", "Snoop Dog", "Justin Bieber"],
+			correct: 0,
+			image: "images/eminem.jpg",
+			ans: "Eminem! Seriously!",
+		},
 
-	{
-		//QUESTION 3
-		number: "Question 3",
-		questionText: "Which real-life music artist appears as a character in the Marvel universe?",
-		answers: ["Eminem", "Lorde", "Snoop Dog", "Justin Bieber"],
-		correct: 0,
-		image: "images/eminem.jpg",
-		ans: "Eminem! Seriously!",
-	},
+		{
+			//QUESTION 4
+			number: "Question 4",
+			questionText: "Which of Iron Man's gadgets has appeared in comics, but not yet in any Marvel films?",
+			answers: ["Suit that assembles on command", "Shoulder-mounted guns", "Remote controlled suit", "Roller skates"],
+			correct: 3,
+			image: "images/ironman.png",
+			ans: "Roller skates. Really.",
+		},
 
-	{
-		//QUESTION 4
-		number: "Question 4",
-		questionText: "Which of Iron Man's gadgets has appeared in comics, but not yet in any Marvel films?",
-		answers: ["Suit that assembles on command", "Shoulder-mounted guns", "Remote controlled suit", "Roller skates"],
-		correct: 3,
-		image: "images/ironman.png",
-		ans: "Roller skates. Really.",
-	},
+		{
+			//QUESTION 5
+			number: "Question 5",
+			questionText: "Which company specializes in cleaning up the mess that superheroes and supervillains leave behind?",
+			answers: ["S.H.I.E.L.D.", "Damage Control", "X-Corporation", "Mr Wolf & Co."],
+			correct: 1,
+			image: "images/damage-control.png",
+			ans: "Damage Control.",
+		},
 
-	{
-		//QUESTION 5
-		number: "Question 5",
-		questionText: "Which company specializes in cleaning up the mess that superheroes and supervillains leave behind?",
-		answers: ["S.H.I.E.L.D.", "Damage Control", "X-Corporation", "Mr Wolf & Co."],
-		correct: 1,
-		image: "images/damage-control.png",
-		ans: "Damage Control.",
-	},
+		{
+			//QUESTION 6
+			number: "Question 6",
+			questionText: "What is the alter ego of the character known as Dark Phoenix?",
+			answers: ["Kitty Pryde", "Scott Summers", "Jean Grey", "Mary Jane Watson"],
+			correct: 2,
+			image: "images/phoenix.jpg",
+			ans: "Jean Grey.",
+		},
 
-	{
-		//QUESTION 6
-		number: "Question 6",
-		questionText: "The character pictured here is known as the Dark Phoenix. What is her alter ego?",
-		answers: ["Kitty Pryde", "Scott Summers", "Jean Grey", "Mary Jane Watson"],
-		correct: 2,
-		image: "images/phoenix.jpg",
-		ans: "Jean Grey.",
-	},
+		{
+			//QUESTION 7
+			number: "Question 7",
+			questionText: "In an alternate reality form of Spider-Man, Peter Parker doesn't turn into Spider-Man. Instead, which of the following superheroes does he become?",
+			answers: ["Sheep Boy", "Batman", "Superman", "Ant Man"],
+			correct: 0,
+			image: "images/sheepboy.jpg",
+			ans: "...Sheep Boy.",
+		},
+	];
 
-	{
-		//QUESTION 7
-		number: "Question 7",
-		questionText: "In an alternate reality form of Spider-Man, Peter Parker doesn't turn into Spider-Man. Instead, which of the following superheroes does he become?",
-		answers: ["Sheep Boy", "Batman", "Superman", "Ant Man"],
-		correct: 0,
-		image: "images/sheepboy.jpg",
-		ans: "...Sheep Boy.",
-	},
-];
-
-//DECLARE QUIZ VARIABLES
+	//DECLARE QUIZ VARIABLES
 	var correctAnswer = 0;
 	var end = false; 
 	var answer = 0;
 	var questionNumber = answer + 1;
 	var x; 
 
-//RESTART QUIZ FUNCTIONALITY
-	restartQuiz();
-
-//QUIZ BEGIN STATE
+	//QUIZ BEGIN STATE
 	$('#start').show();
 	$('#questionNumber').hide();
 	$('#questionText').hide();
@@ -96,10 +92,11 @@ var question = [
 	$('#restart').hide();
 	$('#score').hide();
 
-// START QUIZ FUNCTIONALITY 
+	// START QUIZ FUNCTIONALITY 
 	$('#start').click(function() {
 		console.log("User started quiz");
 		$('#start').hide();
+		$('h1').hide();
 		$('#questionNumber').show();
 		$('#questionText').show();
 		$('ul').show();
@@ -115,7 +112,7 @@ var question = [
 
 	});
 
-//INPUTS FOR EACH QUESTIONS AND CHOICES
+	//INPUTS FOR EACH QUESTIONS AND CHOICES
 	function askQuestion() {
   		console.log("Question number " + questionNumber);
   		$('#questionText').text(question[answer].questionText);
@@ -138,7 +135,7 @@ var question = [
             // }
   	};
 
-  //EVALUATE ANSWER
+  	//EVALUATE ANSWER
   	$("body").on('click', '#submit', function() {
         var userGuess = $("input[type='radio']:checked").val();
         // alert("Question number " + (questionNumber-1));
@@ -156,9 +153,11 @@ var question = [
             correctAnswer ++;
             answer ++;
             if(answer === 7) {
-               $("#score").addClass("final");
+               // $("#score").addClass("final");
                $("#score").text("Your final score is " + correctAnswer +" of " + answer);
                $('#restart').show();
+               $('#next').hide();
+               $('#choices, #choice1, #choice2, #choice3, #choice4, #1stChoice, #2ndChoice, #3rdChoice, #4thChoice').hide();
             }
             else {
             $("#next").show();
@@ -176,9 +175,14 @@ var question = [
             $("#score").text("Current score: " + correctAnswer +" out of " + answer);
             if(answer === 7) {
                $("#score").text("Your final score is " + correctAnswer +" out of " + answer);
-               return;
+               $('#restart').show();
+               $('#next').hide();
+               $('#restart').on('click', function(){
+               		$('#img-placebolder').hide();
+               		$('#image-box').hide();
+               		$('img').hide();
+               })
             }
-            $("#next").show();
         }
     });
 
@@ -204,26 +208,25 @@ var question = [
      	askQuestion();
 	});
 
+  	// RESTART QUIZ FUNCTION
     function restartQuiz() {
     	correctAnswer = 0;
         end = false;
         questAnswer = 0;
         questNumber = 0;
-    	$('#start').show();
 		$('#questionNumber').hide();
-		$('#questionText').show();
-		$("#questionText").text("Want to go another round?");		
+		$('#questionText').hide();		
 		$('ul').hide();
 		$('#choices, #choice1, #choice2, #choice3, #choice4, #1stChoice, #2ndChoice, #3rdChoice, #4thChoice').hide();
 		$('#next').hide();
 		$('#correctAnswer').hide();
 		$('#submit').hide();
-		$('#submit').prop('disabled', true);
 		$('#restart').hide();
 		$('#score').hide();
 		$('#correctAnswer').hide();
-		var currentQuestionIndex = 0;
-		// askQuestion();
+		$('#img-placeholder').hide();
+		askQuestion();
+		currentQuestionIndex = 0;
 	};
 
 	//RESTART QUIZ FUNCTIONALITY
@@ -231,7 +234,6 @@ var question = [
         console.log("User started a new quiz");
         restartQuiz();
     });
-
 });
 
 
