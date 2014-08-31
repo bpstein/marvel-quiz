@@ -107,7 +107,6 @@ var question = [
 		$('#next').hide();
 		$('#correctAnswer').show();
 		$('#submit').show();
-		$('#restart').show();
 		$('#score').show();
 		askQuestion();
 		currentQuestionIndex = 0;
@@ -151,13 +150,15 @@ var question = [
             console.log("correct");
             $("#correctAnswer").show();
             $("#correctAnswer").text("CORRECT!");
+            $('#correctAnswer').text(question[currentQuestionIndex].ans);
             $('#image-box').find('img').attr('src', question[answer].image);
             $('#img-placeholder').show();
             correctAnswer ++;
             answer ++;
             if(answer === 7) {
-                $("#score").addClass("final");
+               $("#score").addClass("final");
                $("#score").text("Your final score is " + correctAnswer +" of " + answer);
+               $('#restart').show();
             }
             else {
             $("#next").show();
@@ -186,6 +187,7 @@ var question = [
 		console.log("User submitted an answer");
 		$('#submit').hide();
 		$('#next').show();
+		$('#choices, #choice1, #choice2, #choice3, #choice4, #1stChoice, #2ndChoice, #3rdChoice, #4thChoice').hide();
 		// $(':radio').prop('unchecked');
 	});
 
@@ -194,9 +196,11 @@ var question = [
 		console.log("User proceeds to next question");
 		questionNumber = answer + 1;
 		$("input:checked").removeAttr("checked");
+		$('#img-placeholder').hide();
 		$('#submit').show();
 		$('#next').hide();
-		$('#correctAnswer').hide();        
+		$('#correctAnswer').hide();
+		$('#choices, #choice1, #choice2, #choice3, #choice4, #1stChoice, #2ndChoice, #3rdChoice, #4thChoice').show();      
      	askQuestion();
 	});
 
