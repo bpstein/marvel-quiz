@@ -20,15 +20,33 @@
 <body>
     <div class="quiz">
         <div class="row">
+
+            <!-- LOGO COLSPAN ROW -->
             <div class="col-span-3"></div>
             <div id="quiz-box" class="col-span-6">
                 <img src="images/marvel-logo.jpg" id="logo">
-                <h1>Quiz App</h1>
-                <div class="col-span-3">
+            <div class="col-span-3"></div>
+
+            <!-- H1 COLSPAN ROW -->
+            <h1>Quiz App</h1>
+
+            <!-- QUESTION COUNTER COLSPAN ROW -->
+                <div class="col-span-3"></div>
+                <div class="col-span-6">
                     <h2 id="questionNumber">Question #1</h2>
                 </div>
-                <h3 id="questionText" class="col-span-3">What is the first question?</h3>
-                <div class="col-span-3">
+                <div class="col-span-3"></div>
+
+                <!-- QUESTION TEXT COLSPAN ROW -->
+                <div class="col-span-3"></div>
+                <div class="col-span-6">
+                    <h3 id="questionText">What is the first question?</h3>
+                </div>
+                <div class="col-span-3"></div>
+                
+                <!-- CHOICES AND IMAGE COLSPAN ROW -->
+                <div class="col-span-3"></div>
+                <div class="col-span-6">
                     <ul id="choices">
                     <li>
                         <input type="radio" name="choice" id="choice1" value="0">
@@ -48,10 +66,18 @@
                     </li>
                     </ul>
                 </div>
-                <div class="col-span-3" id="image-box">
+                <div id="image-box">
+                    <img src="#" id="img-placeholder">
                 </div>
-                <input type="submit" id="next" value="Next">
-                <div id="correctAnswer"></div>
+                <div class="col-span-3"></div>
+
+                <!-- SUBMIT BUTTON COLSPAN ROW -->
+                <div class="col-span-12">
+                    <input type="submit" id="next" value="Next">
+                </div>
+                <div class="col-span-12">
+                    <div id="correctAnswer"></div>
+                </div>
                 <input type="submit" id="start" value="start">
                 <input type="submit" id="submit" value="submit">
                 <div id="score">Current score: 0/1</div>

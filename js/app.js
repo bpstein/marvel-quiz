@@ -125,8 +125,7 @@ var question = [
   		$('#2ndChoice').text(question[answer].answers[1]);
   		$('#3rdChoice').text(question[answer].answers[2]);
   		$('#4thChoice').text(question[answer].answers[3]);
-  		$('#submit').prop("disabled", true);
-		$('#image-box').find('img').attr('src', question[answer].image);  		
+  		$('#submit').prop("disabled", true);	
 		$(":radio").click(function() {
   			console.log("User selected an answer");
             $("#submit").prop("disabled", false);
@@ -152,6 +151,8 @@ var question = [
             console.log("correct");
             $("#correctAnswer").show();
             $("#correctAnswer").text("CORRECT!");
+            $('#image-box').find('img').attr('src', question[answer].image);
+            $('#img-placeholder').show();
             correctAnswer ++;
             answer ++;
             if(answer === 7) {
@@ -166,6 +167,8 @@ var question = [
         }
         else {
             console.log("user guess is wrong");
+            $('#image-box').find('img').attr('src', question[answer].image);
+            $('#img-placeholder').show();
             $("#correctAnswer").show();
             $("#correctAnswer").text("WRONG! " + question[currentQuestionIndex].ans);
             answer++;
