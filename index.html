@@ -1,100 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<html><head>
-    <meta charset="UTF-8">
-    <title>Marvel Quiz App | Thinkful</title>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/layout.css">
 
-    <!-- CSS STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" type="text/css" href="css/layout.css">
-    <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+  <!-- Google Fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,300,100' rel='stylesheet'>
+  <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet'>
 
-    <!-- JAVASCRIPT AND JQUERY -->
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/app.js"></script>
-
+  <title>Marvel Quiz App | Thinkful</title>
 </head>
+
 <body>
-    <div class="quiz">
-        <div class="row">
+  <div class="container">
 
-            <!-- LOGO COLSPAN ROW -->
-            <div class="col-span-3"></div>
-            <div id="quiz-box" class="col-span-6">
-                <img src="images/marvel-logo.jpg" id="logo">
-            <div class="col-span-3"></div>
-
-            <!-- H1 COLSPAN ROW -->
-            <h1>Quiz App</h1>
-
-            <!-- QUESTION COUNTER COLSPAN ROW -->
-                <div class="col-span-3"></div>
-                <div class="col-span-6">
-                    <h2 id="questionNumber">Question #1</h2>
-                </div>
-                <div class="col-span-3"></div>
-
-                <!-- QUESTION TEXT COLSPAN ROW -->
-                <div class="col-span-3"></div>
-                <div class="col-span-6">
-                    <h3 id="questionText">What is the first question?</h3>
-                </div>
-                <div class="col-span-3"></div>
-                
-                <!-- IMAGE COLSPAN ROW -->
-                <div class="col-span-12">
-                    <div id="correctAnswer"></div>
-                </div>
-                <div class="col-span-3"></div>
-                <div class="col-span-6" id="image-box">
-                    <img src="#" id="img-placeholder">
-                </div>
-                <div class="col-span-3"></div>
-
-                <!-- CHOICES COLSPAN ROW -->
-                <div class="col-span-3"></div>
-                <div class="col-span-6">
-                    <ul id="choices">
-                    <li>
-                        <input type="radio" name="choice" id="choice1" value="0">
-                        <label id="1stChoice" for="choice1">Choice 1</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="choice" id="choice2" value="1">
-                        <label id="2ndChoice" for="choice2">Choice 2</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="choice" id="choice3" value="2">
-                        <label id="3rdChoice" for="choice3">Choice 3</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="choice" id="choice4" value="3">
-                        <label id="4thChoice" for="choice4">Choice 4</label>
-                    </li>
-                    </ul>
-                </div>
-                <div id="image-box">
-                    <img src="#" id="img-placeholder">
-                </div>
-                <div class="col-span-3"></div>
-
-                <!-- SUBMIT BUTTON COLSPAN ROW -->
-                <div class="col-span-12">
-                    <input type="submit" id="next" value="Next">
-                </div>
-                <input type="submit" id="start" value="start">
-                <input type="submit" id="submit" value="submit">
-                <div id="score">Current score: 0/1</div>
-                <input type="submit" id="restart" value="restart">
-            </div>
-            <div class="col-span-3"></div>
+    <!-- Header banner and navbar -->
+    <section class="quiz">
+      <div class="row">
+        <div class="col-span-12">
+          <img src="images/hamburger.png" id="menu" alt="menu">
+          <img src="images/marvel-logo.jpg" id="logo" alt="logo">
+          <h1>Quiz App</h1>
         </div>
-    </div>
-    <footer>
-    </footer>
+        <div class="overlay" id="menu-info" style="display: none;">
+          <h3>What's this all about?</h3>
+          <div>This is a quiz app that tests your knowledge of some of the stranger facts in the Marvel universe.<br><br>See how much you know!
+          </div>
+          <br>
+          <button class="btn" id="got-it">Got it!</button>
+        </div>
+      </div>
+    </section>
 
+    <!-- QUESTION NUMBER AND TEXT -->
+    <div class="col-span-3"></div>
+    <div class="col-span-6">
+      <h2 id="questionNumber">Question #1</h2>
+      <h3 id="questionText">What is the first question?</h3>
+    </div>
+    <div class="col-span-3"></div>
+
+    <!-- IMAGE COLSPAN ROW -->
+    <div class="col-span-12" id="correctAnswer"></div>
+    <div class="col-span-12" id="image-box">
+      <img src="#" id="img-placeholder">
+    </div>
+
+    <!-- CHOICES COLSPAN ROW -->
+    <div class="col-span-12">
+      <ul id="choices">
+        <li>
+          <input type="radio" name="choice" id="choice1" value="0">
+          <label id="1stChoice" for="choice1">Choice 1</label>
+        </li>
+        <li>
+          <input type="radio" name="choice" id="choice2" value="1">
+          <label id="2ndChoice" for="choice2">Choice 2</label>
+        </li>
+        <li>
+          <input type="radio" name="choice" id="choice3" value="2">
+          <label id="3rdChoice" for="choice3">Choice 3</label>
+        </li>
+        <li>
+          <input type="radio" name="choice" id="choice4" value="3">
+          <label id="4thChoice" for="choice4">Choice 4</label>
+        </li>
+      </ul>
+    </div>
+    <div id="image-box">
+      <img src="#" id="img-placeholder">
+    </div>
+
+    <!-- SUBMIT BUTTON COLSPAN ROW -->
+    <div class="col-span-12">
+      <input type="submit" id="next" value="Next">
+    </div>
+    <input type="submit" id="start" value="start">
+    <input type="submit" id="submit" value="submit">
+    <div id="score">Current score: 0/1</div>
+    <input type="submit" id="restart" value="restart">
+  </div>
+
+  <!-- JavaScript and jQuery -->
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+               
+
+

@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+	//DISPLAY MENU BOX OVERLAY
+	$('#menu').click(function(){
+  	$('.overlay').fadeIn(1000);
+  	console.log("this works!");
+	});
+
+	//REMOVE MENU BOX OVERLAY
+	$('#got-it').click(function(){
+		$('.overlay').fadeOut(500);
+		console.log("this works too!")
+	});
+
 	//INTRODUCE QUESTIONS AS OBJECTS
 	var question = [
 		{
@@ -210,10 +222,10 @@ $(document).ready(function() {
 
   	// RESTART QUIZ FUNCTION
     function restartQuiz() {
-    	correctAnswer = 0;
-        end = false;
-        questAnswer = 0;
-        questNumber = 0;
+    	// correctAnswer = 0;
+     //    end = false;
+     //    questAnswer = 0;
+     //    questNumber = 0;
 		$('#questionNumber').show();
 		$('#questionText').show();		
 		$('ul').show();
@@ -227,6 +239,8 @@ $(document).ready(function() {
 		$('#img-placeholder').hide();
 		askQuestion();
 		currentQuestionIndex = 0;
+		questNumber = 0;
+		questAnswer = 0;
 	};
 
 	//RESTART QUIZ FUNCTIONALITY

@@ -47,13 +47,14 @@ h1 {
 #questionText {
 	text-align: center;
 	margin-bottom: 20px;
+	padding: 0 150px 0 150px;
 }
 
 #choices {
 	margin-top: 10px;
 	margin-bottom: 25px;
-	margin-left: 250px;
 	padding-top: 15px;
+	text-align: center;
 }
 
 li {
@@ -76,6 +77,15 @@ IMAGES
 	margin-bottom: 10px;
 	width: 250px;
 	height: auto;
+}
+
+#menu {
+	height: 60px;
+	width: auto;
+	text-align: left;
+	float: left;
+	cursor: pointer;
+	position: absolute;
 }
 
 /*#image-box {
@@ -133,3 +143,87 @@ h2, h3, ul, #correctAnswer {
 	margin-top: 20px;
 	text-align: center;
 }
+
+.btn {
+	background-color: #c0392b;
+	color: white;
+	border-radius: 5px;
+	font-size: 1.1em;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	padding: 4px 6px 4px 6px;
+	font-family: 'Permanent Marker', 'Helvetica', Arial;
+}
+
+#start {
+	margin-top: 40px;
+	vertical-align: middle;
+}
+
+#next {
+	display: block;
+}
+
+
+/****************
+MENU BOX OVERLAY
+****************/
+
+.overlay {
+	color: #FFF;
+	background: rgba(0, 0, 0, 0.85);
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: middle;	
+	z-index: 1000;
+	display: block;
+	width: 100%;
+	height: 120vh;
+	text-align: center;
+}
+
+.overlay h3 {
+	font-family: 'Permanent Marker', 'Helvetica', Arial;
+	font-size: 1.8em;
+	padding: 10px 0px 25px 0px;
+	margin-top: 105px;
+}
+
+.overlay div {
+	font-family: 'Permanent Marker', 'Helvetica', Arial;
+	font-size: 1.3em;
+	width: 380px;
+	text-align: center;
+	padding: 0px 25px 25px 25px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 29px;
+}
+
+/****************
+RESPONSIVE
+****************/
+
+@media screen and (max-width: 520px) {
+  /* 10 columns for larger screens */
+	#logo {
+	width: 100px;
+	height: auto;
+  }
+	
+	h1 {
+		font-size: 2em;
+	}
+
+	#menu {
+		width: 50px;
+		height: auto;
+	}
+}
+
