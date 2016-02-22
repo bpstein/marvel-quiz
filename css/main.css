@@ -88,14 +88,6 @@ IMAGES
 	position: absolute;
 }
 
-/*#image-box {
-	width: 150px;
-	height: auto;
-	display: block;
-	margin-right: auto;
-	margin-left: auto;
-}*/
-
 #img-placeholder {
 	display: none;
 }
@@ -128,6 +120,8 @@ BUTTON STYLES
 
 h2, h3, ul, #correctAnswer {
 	display: block;
+	text-align: center;
+	padding: 0 150px 0 150px;
 }
 
 #start, #restart #submit, #score {
@@ -170,6 +164,12 @@ h2, h3, ul, #correctAnswer {
 /****************
 MENU BOX OVERLAY
 ****************/
+
+#menu {
+	height: 60px; width: 60px;
+	position: fixed;
+	cursor: pointer;
+}
 
 .overlay {
 	color: #FFF;
@@ -223,7 +223,7 @@ RESPONSIVE
 
 	#menu {
 		width: 50px;
-		height: auto;
+		height: 50px;
 	}
 }
 
